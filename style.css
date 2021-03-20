@@ -5,17 +5,20 @@
 }
 
 body {
-  margin-top: 100px;
+  margin: 100px auto;
 }
 
 h1,
 h2,
-h3 {
+h3,
+p {
+  text-align: center;
   margin: 0;
 }
 
 h1 {
   font-size: 96px;
+  margin-bottom: 10px;
 }
 
 h2 {
@@ -52,6 +55,10 @@ p {
   color: white;
 }
 
+.primary-link:hover {
+  color: white;
+}
+
 .secondary-link {
   border-radius: 4px;
   padding: 20px 15px;
@@ -61,10 +68,8 @@ p {
   border: 1px solid var(--primary-color);
 }
 
-.homepage-link {
+.secondary-link:hover {
   color: var(--primary-color);
-  text-align: center;
-  display: block;
 }
 
 .about-paragraphs {
@@ -85,4 +90,40 @@ p {
 
 .email-link:hover {
   text-decoration: underline;
+}
+
+@media (min-width: 576px) {
+  h2 {
+    text-align: left;
+  }
+  .col-sm-6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+  .col-sm-4 {
+    flex: 0 0 auto;
+    width: 33.3333333333%;
+  }
+  .app-description {
+    text-align: left;
+  }
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 48px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  .project-link {
+    display: block;
+    text-align: center;
+    margin: 0 20px;
+  }
+
+  .email-link {
+    font-size: 24px;
+  }
 }
